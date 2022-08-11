@@ -30,12 +30,15 @@ THIRD_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'crispy_forms',
+    'crispy_tailwind',
     'tailwind',
     'theme',
 ]
 
 PROJECT_APPS = [
     'accounts',
+    'courses',
     'core',
 ]
 
@@ -45,6 +48,9 @@ TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = [
     '127.0.0.1',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+CRISPY_TEMPLATE_PACKS = "tailwind"
 
 NPM_BIN_PATH = '/usr/local/bin/npm'
 
