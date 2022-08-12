@@ -1,14 +1,20 @@
-from django.conf import settings
-from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 from .views import HomeView
 
 urlpatterns = [
-    path('', HomeView.as_view(), name='home'),
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
+    # path('accounts/', include('allauth.urls')),
+
+    # path('user/', include('accounts.urls', namespace="user")),
+
+    path('courses/', include('courses.urls', namespace="courses")),
+    # path('payment/', include('payment.urls', namespace="payment")),
+
+    path('', HomeView.as_view(), name="home")
 ]
 
 if settings.DEBUG:
